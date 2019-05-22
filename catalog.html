@@ -28,60 +28,107 @@
     <section class="filters">
       <h2 class="visually-hidden">Фильтр товаров</h2>
       <!-- Здесь будет форма -->
-    </section>
+      <form action="https://echo.htmlacademy.ru" method="get">
+        <!-- Сетка -->
+        <p>Сетка</p>
+        <label><input type="radio" name="grid" value="adaptive" checked>Адаптивная
+        </label>
+        <br>
+        <label><input type="radio" name="grid" value="fixed">Фиксированная</label>
+        <br>
+        <label><input type="radio" name="grid" value="rubber">Резиновая</label>
+        <!-- Особенности -->
+        <p>Особенности</p>
+        <label><input type="checkbox" name="property1" value="slider">Слайдер</label>
+        <br>
+        <label><input type="checkbox" name="property2" value="benefits">Блок преимуществ</label>
+        <br>
+        <label><input type="checkbox" name="property3" value="news">Новости</label>
+        <br>
+        <label><input type="checkbox" name="property4" value="gallery">Галерея</label>
+        <br>
+        <!-- Кнопка -->
+        <button type="submit"> Показать </button>
+        </form>
+      </section>
     <!-- Каталог карточек товаров в виде готовых сайтов-->
     <section class="catalog">
       <h2 class="visually-hidden">Каталог сайтов</h2>
       <ul class="catalog-list">
         <li class="catalog-item">
           <img src="img/sedona.jpg" width="355" height="575" alt="Сайт Sedona">
-          <p class="catalog-item-info">
+          <div class="catalog-item-info">
             <h3><a class="catalog-item-title" href="#">Sedona</a></h3>
             <p class="catalog-item-subtitle">Информационный сайт для туристов</p>
             <a class="catalog-button" href="#">9900 руб.</a>
-          </p>
+          </div>
         </li>
         <li class="catalog-item">
           <img src="img/pink.jpg" width="355" height="575" alt="Cайт Pink">
-          <p class="catalog-item-info">
+          <div class="catalog-item-info">
             <h3><a class="catalog-item-title" href="#">Pink App</a></h3>
             <p class="catalog-item-subtitle">Продуктовый лендинг приложения для iOS и Android</p>
             <a class="catalog-button" href="#"> 9 900 руб.</a>
-          </p>  
+          </div>  
         </li>
         <li class="catalog-item">
           <img src="img/borodinski.jpg" width="355" height="575" alt="Cайт Borodinski">
-          <p class="catalog-item-info">
+          <div class="catalog-item-info">
             <h3><a class="catalog-item-title" href="#">Barbershop</a></h3>
             <p class="catalog-item-subtitle">Сайт салона красоты. Для мужчин, да.</p> 
             <a class="catalog-button" href="#">9 900 руб.</a>
-          </p>
+          </div>
         </li> 
         <li class="catalog-item">
           <img src="img/mishka.jpg" width="355" height="575" alt="Cайт Mishka">
-          <p class="catalog-item-info"> 
+          <div class="catalog-item-info"> 
             <h3><a class="catalog-item-title" href="#">Mishka</a></h3>
             <p class="catalog-item-subtitle">Интернет-магазин вязаных игрушек</p>  
             <a class="catalog-button" href="#">9 900 руб.</a>
-          </p>
+          </div>
         </li>
         <li class="catalog-item">
           <img src="img/aplus.jpg" width="355" height="575" alt="Cайт A +">
-          <p class="catalog-item-info">
+          <div class="catalog-item-info">
            <h3><a class="catalog-item-title" href="#">A Plus</a></h3>
            <p class="catalog-item-subtitle">Лендинг курсов повышения квалификации</p>
            <a class="catalog-button" href="#">9 900 руб.</a>  
-         </p>
+          </div>
        </li>
        <li class="catalog-item">
         <img src="img/kvast.jpg" width="355" height="575" alt="Cайт Кваст">
-        <p class="catalog-item-info">
+        <div class="catalog-item-info">
           <h3><a class="catalog-item-title" href="#">Кваст</a></h3>
           <p class="catalog-item-subtitle">Промо-сайт производителя крафтового кваса</p>
           <a class="catalog-button" href="#">9 900 руб.</a>  
-        </p>
+        </div>
       </li>
     </ul> 
+    </section>
+    <!-- Секция с формой обратной связи-->
+    <section class="contacts">
+      <form class="write-us" action="https://echo.htmlacademy.ru" method="get">
+        <fieldset>
+          <legend>Напишите нам</legend>
+          <label>
+            Ваше имя:
+            <br>
+            <input type="text" name="name" placeholder="Имя Фамилия">
+          </label>
+          <label>
+            Ваш e-mail:
+            <input type="email" name="email" placeholder="email@example.com">
+          </label>
+          <br>
+          <label>
+            Текст письма:
+            <br>
+            <textarea name="email-content" cols="30" rows="5" placeholder="В свободной форме"></textarea>
+          </label>
+          <br>
+          <button type="submit" class="write-us-button">Отправить</button>
+        </fieldset>
+      </form>
     </section>
   </main>
   <footer class="main-footer">
@@ -103,3 +150,4 @@
   </footer>
 </body>
 </html>
+
