@@ -16,20 +16,20 @@
       <ul class="site-navigation">
         <li><a href="index.html">Студия</a></li>
         <li><a href="client.html">Клиенты</a></li>
-        <li class="navigation-active-link"><a>Магазин</a></li>
+        <li class="site-navigation-active-link"><a>Магазин</a></li>
         <li><a href="contacts.html">Контакты</a></li>
       </ul>
-      <a href="cart.html">Корзина</a>
+         <a class="cart-navigation" href="cart.html">Корзина</a>
     </nav>
-  </header> 
+  </header>
   <main class="container">
     <h1 class="heading-text">Магазин готовых шаблонов</h1>
     <!-- Секция фильтров -->
     <section class="filters">
       <h2 class="visually-hidden">Фильтр товаров</h2>
-      <!-- Здесь будет форма -->
       <form action="https://echo.htmlacademy.ru" method="get">
-        <!-- Сетка -->
+        <!-- Сетка и особенности -->
+        <div class="filter-type">
         <p>Сетка</p>
         <label><input type="radio" name="grid" value="adaptive" checked>Адаптивная
         </label>
@@ -37,8 +37,9 @@
         <label><input type="radio" name="grid" value="fixed">Фиксированная</label>
         <br>
         <label><input type="radio" name="grid" value="rubber">Резиновая</label>
+
         <!-- Особенности -->
-        <p>Особенности</p>
+        <p >Особенности</p>
         <label><input type="checkbox" name="property1" value="slider">Слайдер</label>
         <br>
         <label><input type="checkbox" name="property2" value="benefits">Блок преимуществ</label>
@@ -46,9 +47,10 @@
         <label><input type="checkbox" name="property3" value="news">Новости</label>
         <br>
         <label><input type="checkbox" name="property4" value="gallery">Галерея</label>
+        </div>
         <br>
         <!-- Кнопка -->
-        <button type="submit"> Показать </button>
+        <button class="filter-button" type="submit"> Показать </button>
         </form>
       </section>
     <!-- Каталог карточек товаров в виде готовых сайтов-->
@@ -69,21 +71,21 @@
             <h3><a class="catalog-item-title" href="#">Pink App</a></h3>
             <p class="catalog-item-subtitle">Продуктовый лендинг приложения для iOS и Android</p>
             <a class="catalog-button" href="#"> 9 900 руб.</a>
-          </div>  
+          </div>
         </li>
         <li class="catalog-item">
           <img src="img/borodinski.jpg" width="355" height="575" alt="Cайт Borodinski">
           <div class="catalog-item-info">
             <h3><a class="catalog-item-title" href="#">Barbershop</a></h3>
-            <p class="catalog-item-subtitle">Сайт салона красоты. Для мужчин, да.</p> 
+            <p class="catalog-item-subtitle">Сайт салона красоты. Для мужчин, да.</p>
             <a class="catalog-button" href="#">9 900 руб.</a>
           </div>
-        </li> 
+        </li>
         <li class="catalog-item">
           <img src="img/mishka.jpg" width="355" height="575" alt="Cайт Mishka">
-          <div class="catalog-item-info"> 
+          <div class="catalog-item-info">
             <h3><a class="catalog-item-title" href="#">Mishka</a></h3>
-            <p class="catalog-item-subtitle">Интернет-магазин вязаных игрушек</p>  
+            <p class="catalog-item-subtitle">Интернет-магазин вязаных игрушек</p>
             <a class="catalog-button" href="#">9 900 руб.</a>
           </div>
         </li>
@@ -92,7 +94,7 @@
           <div class="catalog-item-info">
            <h3><a class="catalog-item-title" href="#">A Plus</a></h3>
            <p class="catalog-item-subtitle">Лендинг курсов повышения квалификации</p>
-           <a class="catalog-button" href="#">9 900 руб.</a>  
+           <a class="catalog-button" href="#">9 900 руб.</a>
           </div>
        </li>
        <li class="catalog-item">
@@ -100,10 +102,10 @@
         <div class="catalog-item-info">
           <h3><a class="catalog-item-title" href="#">Кваст</a></h3>
           <p class="catalog-item-subtitle">Промо-сайт производителя крафтового кваса</p>
-          <a class="catalog-button" href="#">9 900 руб.</a>  
+          <a class="catalog-button" href="#">9 900 руб.</a>
         </div>
       </li>
-    </ul> 
+    </ul>
     </section>
     <!-- Секция с формой обратной связи-->
     <section class="contacts">

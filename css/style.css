@@ -1,3 +1,5 @@
+/*Хелперы*/
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -8,3 +10,202 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+/*Общие стили*/
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #283136;
+}
+
+a {
+  color: #000;
+}
+
+/* Шапка сайта*/
+
+.main-header {
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+  background-color: #eeeeee;
+}
+
+.main-header-logo:hover {
+  opacity: 0.7;
+}
+
+.main-header-logo:active {
+  opacity: 0.4;
+}
+
+/*Основная навигация*/
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation a,
+.cart-navigation {
+  text-decoration: none;
+}
+
+/*Наведение*/
+.site-navigation a:hover,
+.cart-navigation:hover {
+  color: #fb565a;
+}
+
+/*Нажатие*/
+
+.site-navigation a:active,
+.cart-navigation:active {
+  color: #bdbdbd;
+}
+
+.services-list {
+  list-style: none;
+}
+
+.services-item h3 {
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+/*Секция с услугами*/
+
+.services-link {
+  line-height: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.services-link--red {
+  background-color: #fb565a;
+}
+
+.services-link--red:hover {
+  background-color: #e74246;
+}
+
+.services-link--red:active {
+  background-color: #d7373b;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.services-link--green {
+  background-color: #00ca74;
+}
+
+.services-link--green:hover {
+  background-color: #00bc6c;
+}
+
+.services-link--green:active {
+  background-color: #00aa62;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.services-link--yellow {
+  background-color: #efc84a;
+}
+
+.services-link--yellow:hover {
+  background-color: #eab534;
+}
+
+.services-link--yellow:active {
+  background-color: #e5a722;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-slogan-heading {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.footer-slogan-text {
+  line-height: 22px;
+}
+
+/* Каталог */
+
+.heading-text {
+  font-size: 55px;
+  line-height: 55px;
+  background-color: #eeeeee;
+}
+
+.filter-type p {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.filter-type label {
+  line-height: 20px;
+}
+
+.filter-button {
+  line-height: 22px;
+  text-transform: uppercase;
+  font-weight: 600;
+  background-color: #eeeeee;
+  border: none;
+}
+
+.filter-button:hover {
+  background-color: #dfdfdf;
+}
+
+.filter-button:active {
+  background-color: #d5d5d5;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Единица каталога */
+
+.catalog-item {
+  list-style: none;
+}
+
+.catalog-item  a {
+  text-decoration: none;
+}
+
+.catalog-item-info {
+  display: none;
+  background-color: #eee;
+}
+
+.catalog-item-title {
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.catalog-item-subtitle {
+  line-height: 18px;
+  color: #666666;
+}
+
+.catalog-button {
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #fb565a;
+}
+
+/* Форма обратной связи */
+
+.contacts {
+  display: none;
+}
+
