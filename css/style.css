@@ -63,7 +63,7 @@ a {
 
 .site-navigation a:active,
 .cart-navigation:active {
-  color: #bdbdbd;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .services-list {
