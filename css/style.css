@@ -1,5 +1,4 @@
 /*Хелперы*/
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -12,8 +11,9 @@
 }
 
 /*Общие стили*/
-
 body {
+  margin: 0;
+  padding: 0;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -26,7 +26,6 @@ a {
 }
 
 /* Шапка сайта*/
-
 .main-header {
   font-weight: 500;
   line-height: 30px;
@@ -43,7 +42,6 @@ a {
 }
 
 /*Основная навигация*/
-
 .site-navigation {
   list-style: none;
 }
@@ -60,7 +58,6 @@ a {
 }
 
 /*Нажатие*/
-
 .site-navigation a:active,
 .cart-navigation:active {
   color: rgba(0, 0, 0, 0.3);
@@ -77,7 +74,6 @@ a {
 }
 
 /*Секция с услугами*/
-
 .services-link {
   line-height: 18px;
   text-transform: uppercase;
@@ -124,22 +120,19 @@ a {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.footer-slogan-heading {
-  font-size: 36px;
-  line-height: 36px;
-  font-weight: 700;
-}
-
-.footer-slogan-text {
-  line-height: 22px;
-}
-
 /* Каталог */
+.heading-block {
+  background-color: #eeeeee;
+  text-align: center;
+  padding: 60px 0 120px;
+  margin-bottom: 60px;
+}
 
 .heading-text {
   font-size: 55px;
   line-height: 55px;
   background-color: #eeeeee;
+  margin: 0;
 }
 
 .filter-type p {
@@ -154,9 +147,10 @@ a {
 }
 
 .filter-button {
+  font-size: 16px;
   line-height: 22px;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
   background-color: #eeeeee;
   border: none;
 }
@@ -171,7 +165,6 @@ a {
 }
 
 /* Единица каталога */
-
 .catalog-item {
   list-style: none;
 }
@@ -204,8 +197,110 @@ a {
 }
 
 /* Форма обратной связи */
-
 .contacts {
   display: none;
 }
 
+/*Флекс контейнер для навигации*/
+.main-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 50px 0 20px;
+  width: 1160px;
+}
+
+.site-navigation {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.site-navigation li {
+  padding: 0 24px;
+}
+
+/*Флекс контейнер для футера */
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  width: 1160px;
+  padding: 34px 0 54px;
+}
+
+.footer-list {
+  display: flex;
+  margin: 0;
+  padding: 0 130px 0 0;
+}
+
+.footer-list li {
+  list-style: none;
+  height: 80px;
+  width: 80px;
+  border-radius: 40px;
+  margin-right: 10px;
+  background-color: #e1e1e1;
+  line-height: 80px;
+  text-align: center;
+}
+
+.footer-slogan-heading {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.footer-slogan-text {
+  line-height: 22px;
+}
+
+/*секция Услуги*/
+
+.container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.services {
+  padding: 80px 0;
+}
+
+.services-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.services-item {
+  flex-basis: 386.6666666px;
+  padding-right: 100px;
+}
+
+/*Страница каталога*/
+
+.catalog-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filters {
+  width: 260px;
+}
+
+.catalog-list {
+  width: 760px;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.catalog-item {
+  margin-bottom: 30px;
+}

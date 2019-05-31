@@ -24,9 +24,12 @@
       <a class="cart-navigation" href="cart.html">Корзина</a>
     </nav>
   </header>
-  <main class="container">
-    <h1 class="heading-text">Магазин готовых шаблонов</h1>
-    <!-- Секция фильтров -->
+  <main>
+    <div class="heading-block">
+        <h1 class="heading-text">Магазин готовых шаблонов</h1>
+    </div>
+    <div class="catalog-columns container">
+          <!-- Секция фильтров -->
     <section class="filters">
       <h2 class="visually-hidden">Фильтр товаров</h2>
       <form action="https://echo.htmlacademy.ru" method="get">
@@ -54,7 +57,7 @@
         <!-- Кнопка -->
         <button class="filter-button" type="submit"> Показать </button>
         </form>
-      </section>
+    </section>
     <!-- Каталог карточек товаров в виде готовых сайтов-->
     <section class="catalog">
       <h2 class="visually-hidden">Каталог сайтов</h2>
@@ -109,6 +112,7 @@
       </li>
     </ul>
     </section>
+    </div>
     <!-- Секция с формой обратной связи-->
     <section class="contacts">
       <form class="write-us" action="https://echo.htmlacademy.ru" method="get">
@@ -116,40 +120,42 @@
           <legend>Напишите нам</legend>
           <label>
             Ваше имя:
-            <br>
             <input type="text" name="name" placeholder="Имя Фамилия">
           </label>
           <label>
             Ваш e-mail:
             <input type="email" name="email" placeholder="email@example.com">
           </label>
-          <br>
           <label>
             Текст письма:
-            <br>
             <textarea name="email-content" cols="30" rows="5" placeholder="В свободной форме"></textarea>
           </label>
-          <br>
           <button type="submit" class="write-us-button">Отправить</button>
         </fieldset>
       </form>
     </section>
   </main>
   <footer class="main-footer">
-    <ul class="footer-list">
-      <li class="footer-item">
-        <a href="#" aria-label="Страница Нёрдс в ВКонтакте"></a>
-      </li>
-      <li class="footer-item">
-        <a href="#" aria-label="Страница Нёрдс в Фейсбуке"></a>
-      </li>
-      <li class="footer-item">
-        <a href="#" aria-label="Страница Нёрдс в Инстаграмме"></a>
-      </li>
-    </ul>
-    <div class="footer-slogan">
-      <p class="footer-slogan-heading">Давайте дружить, это выгодно!</p>
-      <p class="footer-slogan-text">Скидка 10 % для друзей из социальных сетей!</p>
+    <div class="footer-container">
+      <ul class="footer-list">
+        <li class="footer-item">
+          <a href="#" aria-label="Страница Нёрдс в ВКонтакте">
+            <img src="img/vk-icon.svg"></a>
+        </li>
+        <li class="footer-item">
+          <a href="#" aria-label="Страница Нёрдс в Фейсбуке">
+            <img src="img/fb-icon.svg"></a>
+        </li>
+        </li>
+        <li class="footer-item">
+          <a href="#" aria-label="Страница Нёрдс в Инстаграмме">
+            <img src="img/insta-icon.svg"></a>
+        </li>
+      </ul>
+      <div class="footer-slogan">
+        <p class="footer-slogan-heading">Давайте дружить, это выгодно!</p>
+        <p class="footer-slogan-text">Скидка 10 % для друзей из социальных сетей!</p>
+      </div>
     </div>
   </footer>
 </body>
