@@ -28,9 +28,9 @@ a {
 /* Враппер*/
 .container {
   width: 1160px;
-  margin:  0 auto;
+  margin: 0 auto;
   padding-right: 20px;
-  padding-left:  20px;
+  padding-left: 20px;
 }
 
 /* Шапка сайта*/
@@ -82,7 +82,6 @@ a {
 }
 
 /*Секция с услугами*/
-
 .services-link {
   line-height: 18px;
   text-transform: uppercase;
@@ -143,14 +142,20 @@ a {
   background-color: #eeeeee;
 }
 
-.filter-type p {
+/*Фильтры*/
+.filter-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.filter-type legend {
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.filter-type label {
+.filter-item label {
   line-height: 20px;
 }
 
@@ -265,7 +270,6 @@ a {
 }
 
 /*секция Услуги*/
-
 .services {
   padding: 80px 0;
 }
@@ -302,6 +306,293 @@ a {
 }
 
 .catalog-item {
-  margin-bottom: 30px;
+  margin-bottom: 65px;
   width: 360px;
+}
+
+.about-us-heading {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;
+  margin-bottom: 35px;
+}
+
+.about-us-subheading {
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 45px;
+}
+
+.about-us-list {
+  list-style: none;
+  margin-top: 35px;
+}
+
+.about-us-list li {
+  margin-bottom: 30px;
+}
+
+.about-us-numbers-heading {
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0;
+  padding-bottom: 40px;
+}
+
+.about-us-table th {
+  font-size: 45px;
+  line-height: 11px;
+  font-weight: 500;
+  padding-bottom: 25px;
+  padding-right: 25px;
+}
+
+/*-- Блок маркетинга -флексы --*/
+.about-us-container {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-us {
+  width: 700px;
+}
+
+/*Псевдоэлементы
+корзинка */
+a.cart-navigation {
+  position: relative;
+}
+
+.cart-navigation::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 7.5px;
+  left: -40px;
+  background-image: url("../img/cart-icon.svg");
+}
+
+/* Красные черточки перед лишками.*/
+.about-us-list li {
+  position: relative;
+}
+
+.about-us-list li::before {
+  content: "";
+  left: -35px;
+  top: 50%;
+  margin-top: -1px;
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background-color: red;
+  font-weight: 500;
+}
+
+/*Шапки сверху серые на сайты*/
+.catalog-item {
+  position: relative;
+}
+
+.catalog-item::before {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 40px;
+  top: -40px;
+  left: 0px;
+  background-image: url("../img/browser.svg");
+  opacity: 0.12;
+  -webkit-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.catalog-item:hover:before {
+  opacity: 1;
+}
+
+/*Особенности Разметка сложного фильтра*/
+
+.filter-item {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.range-filter {
+  width: 260px;
+  margin-top: 49px;
+}
+
+.filter-item legend {
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.range-controls {
+  position: relative;
+  height: 41px;
+  margin-bottom: 15px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 50px;
+}
+
+.range-controls .toggle-max {
+  left: 110px;
+}
+
+.price-controls {
+  font-size: 0;
+}
+
+.price-controls label {
+  display: inline-block;
+  width: 50%;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.price-controls input {
+  width: 60px;
+  padding: 8px 10px;
+  margin-left: 10px;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #283136;
+  border: none;
+  border-radius: 5px;
+  background: #f1f1f1;
+}
+
+.max-price {
+  text-align: right;
+}
+
+.price-controls {
+  font-size: 0;
+}
+
+.price-controls label {
+  display: inline-block;
+  width: 50%;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.price-controls input {
+  width: 60px;
+  padding: 8px 10px;
+  margin-left: 10px;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #283136;
+  border: none;
+  border-radius: 5px;
+  background: #f1f1f1;
+}
+
+.max-price {
+  text-align: right;
+}
+
+
+/*Стилизация радиокнопок в виде псевдоэлементов- особенности*/
+input[type="checkbox"],
+input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  position: relative;
+  padding-left: 30px;
+}
+
+/*Стилизуем чекбоксы*/
+
+input[type="checkbox"] + label::before {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  top: 50%;
+  left: 0px;
+  margin-top: -11.5px;
+  background-image: url("../img/checkbox-off.svg");
+  opacity: 0.4;
+}
+
+input[type="checkbox"]:checked + label::before {
+  width: 27px;
+  background-image: url("../img/checkbox-on.svg");
+  opacity: 0.4;
+}
+
+/*Стилизуем радиобаттоны*/
+/*Первое состояние- выключено*/
+input[type="radio"] + label::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 50%;
+  left: 0px;
+  margin-top: -12.5px;
+  background-image:url("../img/radio-off.svg");
+  opacity: 0.4;
+}
+
+input[type="radio"]:checked + label::before {
+  background-image: url("../img/radio-on.svg");
+  opacity: 0.4;
+}
+
+.filter-list li {
+  margin-bottom: 15px;
 }

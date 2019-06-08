@@ -33,27 +33,63 @@
     <section class="filters">
       <h2 class="visually-hidden">Фильтр товаров</h2>
       <form action="https://echo.htmlacademy.ru" method="get">
-        <!-- Сетка и особенности -->
-        <div class="filter-type">
-        <p>Сетка</p>
-        <label><input type="radio" name="grid" value="adaptive" checked>Адаптивная
-        </label>
-        <br>
-        <label><input type="radio" name="grid" value="fixed">Фиксированная</label>
-        <br>
-        <label><input type="radio" name="grid" value="rubber">Резиновая</label>
-
+        <!-- Стоимость -->
+        <fieldset class="filter-item">
+          <legend>Стоимость:</legend>
+          <div class="range-filter">
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="toggle toggle-min"></div>
+              <div class="toggle toggle-max"></div>
+            </div>
+            <div class="price-controls">
+              <label class="min-price">от <input name="min-price" type="text" value="0"></label>
+              <label class="max-price">до <input name="max-price" type="text" value="15000"></label>
+            </div>
+          </div>
+        </fieldset>
+        <!-- Сетка -->
+        <fieldset class="filter-item">
+          <legend>Сетка</legend>
+          <ul class="filter-list">
+            <li>
+              <input type="radio" id="adaptive" name="grid" value="adaptive" checked>
+              <label for="adaptive">Адаптивная</label>
+            </li>
+            <li>
+              <input id="fixed" type="radio" name="grid" value="fixed">
+              <label for="fixed">Фиксированная</label>
+            </li>
+            <li>
+              <input id="flexible" type="radio" name="grid" value="flexible">
+              <label for="flexible">Резиновая</label>
+            </li>
+          </ul>
+        </fieldset>
         <!-- Особенности -->
-        <p>Особенности</p>
-        <label><input type="checkbox" name="property1" value="slider">Слайдер</label>
-        <br>
-        <label><input type="checkbox" name="property2" value="benefits">Блок преимуществ</label>
-        <br>
-        <label><input type="checkbox" name="property3" value="news">Новости</label>
-        <br>
-        <label><input type="checkbox" name="property4" value="gallery">Галерея</label>
-        </div>
-        <br>
+        <fieldset class="filter-item">
+          <legend>Особенности: </legend>
+          <ul class="filter-list">
+            <li>
+              <input id="slider" type="checkbox" name="property1" value="slider">
+              <label for="slider" >Слайдер</label>
+            </li>
+            <li>
+              <input id="benefits" type="checkbox" name="property2" value="benefits">
+              <label for="benefits">Блок преимуществ</label>
+            </li>
+            <li>
+              <input id="news" type="checkbox" name="property3" value="news">
+              <label for="news">Новости</label>
+            </li>
+            <li>
+              <input id="gallery" type="checkbox" name="property4" value="gallery">
+              <label for="gallery">Галерея</label>
+            </li>
+          </ul>
+        </fieldset>
         <!-- Кнопка -->
         <button class="filter-button" type="submit"> Показать </button>
         </form>
@@ -63,7 +99,7 @@
       <h2 class="visually-hidden">Каталог сайтов</h2>
       <ul class="catalog-list">
         <li class="catalog-item">
-          <img src="img/sedona.jpg" width="355" height="575" alt="Сайт Sedona">
+          <img src="img/sedona.jpg" width="360" height="575" alt="Сайт Sedona">
           <div class="catalog-item-info">
             <h3><a class="catalog-item-title" href="#">Sedona</a></h3>
             <p class="catalog-item-subtitle">Информационный сайт для туристов</p>
@@ -71,7 +107,7 @@
           </div>
         </li>
         <li class="catalog-item">
-          <img src="img/pink.jpg" width="355" height="575" alt="Cайт Pink">
+          <img src="img/pink.jpg" width="360" height="575" alt="Cайт Pink">
           <div class="catalog-item-info">
             <h3><a class="catalog-item-title" href="#">Pink App</a></h3>
             <p class="catalog-item-subtitle">Продуктовый лендинг приложения для iOS и Android</p>
@@ -79,7 +115,7 @@
           </div>
         </li>
         <li class="catalog-item">
-          <img src="img/borodinski.jpg" width="355" height="575" alt="Cайт Borodinski">
+          <img src="img/borodinski.jpg" width="360" height="575" alt="Cайт Borodinski">
           <div class="catalog-item-info">
             <h3><a class="catalog-item-title" href="#">Barbershop</a></h3>
             <p class="catalog-item-subtitle">Сайт салона красоты. Для мужчин, да.</p>
@@ -87,7 +123,7 @@
           </div>
         </li>
         <li class="catalog-item">
-          <img src="img/mishka.jpg" width="355" height="575" alt="Cайт Mishka">
+          <img src="img/mishka.jpg" width="360" height="575" alt="Cайт Mishka">
           <div class="catalog-item-info">
             <h3><a class="catalog-item-title" href="#">Mishka</a></h3>
             <p class="catalog-item-subtitle">Интернет-магазин вязаных игрушек</p>
@@ -95,7 +131,7 @@
           </div>
         </li>
         <li class="catalog-item">
-          <img src="img/aplus.jpg" width="355" height="575" alt="Cайт A +">
+          <img src="img/aplus.jpg" width="360" height="575" alt="Cайт A +">
           <div class="catalog-item-info">
            <h3><a class="catalog-item-title" href="#">A Plus</a></h3>
            <p class="catalog-item-subtitle">Лендинг курсов повышения квалификации</p>
@@ -103,7 +139,7 @@
           </div>
        </li>
        <li class="catalog-item">
-        <img src="img/kvast.jpg" width="355" height="575" alt="Cайт Кваст">
+        <img src="img/kvast.jpg" width="360" height="575" alt="Cайт Кваст">
         <div class="catalog-item-info">
           <h3><a class="catalog-item-title" href="#">Кваст</a></h3>
           <p class="catalog-item-subtitle">Промо-сайт производителя крафтового кваса</p>
@@ -160,4 +196,3 @@
   </footer>
 </body>
 </html>
-
