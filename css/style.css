@@ -9,7 +9,7 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
+/*В примере хидден отличается рт моего и имг тоже заданы общие стили*/
 /*Общие стили*/
 body {
   margin: 0;
@@ -752,4 +752,55 @@ input[type="radio"]:checked + label::before {
     background-color: #e74246;
 }
 
-.button:active {
+/*Пагинация*/
+
+.pagination-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.pagination-item {
+  margin-right: 5px;
+}
+
+.pagination-item:last-child {
+  margin-right: 0;
+}
+/*Состояние покоя-#еее */
+.pagination-item a {
+  display: block;
+  padding: 10px 19px;
+  text-decoration: none;
+  color: #010101;
+  background-color: #eeeeee;
+  border-radius: 3px;
+}
+/*Наведение -dfdfdf ,нажатие и активный пункт-d5d5d5*/
+.pagination-item a:hover {
+ background-color: #dfdfdf;
+}
+
+.pagination-item a:focus,
+.pagination-item a:active {
+  background-color: #d5d5d5;
+}
+/*Первая клавиша при наведении*/
+
+.pagination-item-current a {
+  padding: 8px 17px;
+  color: #000000;
+  background-color: #ffffff;
+  border: 2px solid #bfbfbf;
+}
+
+.pagination-item-current a:hover,
+.pagination-item-current a:focus,
+.pagination-item-current a:active {
+  color: #000000;
+  background-color: #ffffff;
+}
