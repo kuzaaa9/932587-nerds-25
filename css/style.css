@@ -266,6 +266,7 @@ a {
 
 /*Карта ,заданная фоном-*/
 .contacts-wrapper {
+  position: relative;
   margin-top: 80px;
   padding: 55px 0;
   background-image: url('../img/map.png');
@@ -274,17 +275,26 @@ a {
   -webkit-background-size: cover;
   background-size: cover;
 }
+
+.contacts-wrapper iframe {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
 /*Белый квадрат с адресом*/
 .contacts {
   width: 320px;
   height: 310px;
-  padding-top: 49px;
-  padding-bottom: 49px;
+  padding: 50px;
   background-color: #ffffff;
-  text-align: center;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  position: relative;
+  z-index: 999;
 }
 
 .contacts h1 {
@@ -298,6 +308,7 @@ a {
 .contacts-details {
   line-height: 18px;
   font-style: normal;
+  color: #666666;
 }
 
 .contacts-details span {
@@ -320,9 +331,187 @@ a {
   border: none;
 }
 
-/* Форма обратной связи */
-.write-us {
+/* Попап */
+
+.modal {
   display: none;
+  position: fixed;
+  top: 120px;
+  left: 50%;
+  margin-left: -480px;
+  width: 960px;
+  padding: 65px 100px 80px;
+  background-color: #fff;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.modal-visible {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+.modal-close {
+  position: absolute;
+  right: 85px;
+  top: 80px;
+  width: 32px;
+  height: 32px;
+  font-size: 0;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  opacity: 0.3;
+}
+
+.modal-close:hover {
+  opacity: 1;
+}
+
+.modal-close:focus {
+  outline: none;
+  opacity: 0.1;
+}
+
+.modal-close::before,
+.modal-close::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  width: 25px;
+  height: 3px;
+  background-color: #fb565a;
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+/*Анимация для появления попапа*/
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/*Анимация при ошибке заполнения формы*/
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+/*Write us форма*/
+
+.write-us-fieldset {
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+
+.write-us-fields-heading {
+  font-size: 45px;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.write-us-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.write-us-field {
+  width: calc(50% - 20px);
+}
+
+.write-us-textarea {
+  width: 100%;
+}
+
+.write-us-fieldset label {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.write-us-fieldset input,
+.write-us-fieldset textarea {
+  margin-top: 5px;
+  padding: 15px;
+  box-sizing: border-box;
+  border: solid 2px #d7dcde;
+  border-radius: 3px;
+}
+
+.write-us-fieldset input:hover,
+.write-us-fieldset textarea:hover {
+  border: solid 2px #b4b9bb;
+}
+
+.write-us-fieldset input:focus,
+.write-us-fieldset textarea:focus {
+  outline: none;
+  border: solid 2px #000000;
+}
+
+.write-us-fieldset .field-error {
+  border: solid 2px #e74246;
+}
+
+.write-us-fieldset textarea {
+  width: 100%;
+}
+
+.write-us-field input {
+  width: 100%;
+}
+
+.write-us-button {
+  margin-top: 25px;
+}
+
+::placeholder{
+  color: rgba(68, 68, 68, 0.5);
 }
 
 /*Флекс контейнер для навигации*/
@@ -357,6 +546,7 @@ a {
   flex-wrap: wrap;
   width: 270px;
   margin: 0 130px 0 0;
+  padding: 0;
 }
 
 .footer-list li {

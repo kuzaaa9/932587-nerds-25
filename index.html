@@ -139,6 +139,7 @@
       </section>
     </div>
     <section class="contacts-wrapper">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1188.3823920152272!2d30.32231397986258!3d59.938563839959684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sfr!4v1561130949001!5m2!1sru!2sfr" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
       <div class="container">
              <!-- Белый квадрат на фоне карты -->
      <div class="contacts">
@@ -149,29 +150,6 @@
        </address>
        <button class="contacts-button">напишите нам</button>
      </div>
-     <!-- Секция с формой обратной связи-->
-     <form class="write-us" action="https://echo.htmlacademy.ru" method="get">
-      <fieldset>
-        <legend>Напишите нам</legend>
-        <label>
-          Ваше имя:
-          <br>
-          <input type="text" name="name" placeholder="Имя Фамилия">
-        </label>
-        <label>
-          Ваш e-mail:
-          <input type="email" name="email" placeholder="email@example.com">
-        </label>
-        <br>
-        <label>
-          Текст письма:
-          <br>
-          <textarea name="email-content" cols="30" rows="5" placeholder="В свободной форме"></textarea>
-        </label>
-        <br>
-        <button type="submit" class="write-us-button">Отправить</button>
-      </fieldset>
-      </form>
       </div>
     </section>
 </main>
@@ -206,5 +184,103 @@
     </div>
   </div>
 </footer>
+<section class="modal">
+  <!-- Секция с формой обратной связи-->
+  <form class="write-us" action="https://echo.htmlacademy.ru" method="get">
+    <fieldset class="write-us-fieldset">
+      <legend class="write-us-fields-heading">Напишите нам</legend>
+      <div class="write-us-row">
+        <p class="write-us-field">
+          <label for="name">Ваше имя:</label>
+          <input id="name" name="name" placeholder="Имя Фамилия">
+        </p>
+        <p class="write-us-field">
+          <label for="email">Ваш e-mail:</label>
+          <input id="email" name="email" placeholder="email@example.com">
+        </p>
+      </div>
+      <div class="write-us-row">
+        <p class="write-us-textarea">
+          <label for="email-content">Текст письма:</label>
+          <textarea id="email-content" name="email-content" cols="30" rows="5" placeholder="В свободной форме"></textarea>
+        </p>
+      </div>
+      <button class="button write-us-button" type="submit">Отправить</button>
+    </fieldset>
+  </form>
+  <button class="modal-close" type="button write-us-button"></button>
+</section>
+<script>
+  var contactForm = document.querySelector('.write-us');
+  var popupButtonOpen = document.querySelector('.contacts-button');
+  var popup = document.querySelector('.modal');
+  var popupButtonClose = popup.querySelector(".modal-close");
+  var nameField = popup.querySelector("[name=name]");
+  var emailField = popup.querySelector("[name=email]");
+  var contentField = popup.querySelector("[name=email-content]");
+
+  var isStorageSupport = true;
+  var storageName = "";
+  var storageEmail = "";
+
+  try {
+    storageName = localStorage.getItem("name");
+    storageEmail= localStorage.getItem("email");
+  } catch (err) {
+    isStorageSupport = false;
+  }
+
+  popupButtonOpen.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popup.classList.add('modal-visible');
+    if (storageName) {
+      nameField.value = storageName;
+      emailField.focus();
+    }
+    if (storageEmail) {
+      emailField.value = storageEmail;
+      contentField.focus();
+    }
+  });
+  popupButtonClose.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popup.classList.remove('modal-visible');
+    popup.classList.remove("modal-error");
+  });
+  contactForm.addEventListener("submit", function (evt) {
+    if (!nameField.value) {
+      nameField.classList.add("field-error");
+    }
+    if (!emailField.value) {
+      emailField.classList.add("field-error");
+    }
+    if (!contentField.value) {
+      contentField.classList.add("field-error");
+    }
+    if (!nameField.value || !emailField.value || !contentField.value) {
+      evt.preventDefault();
+      popup.classList.remove("modal-error");
+      popup.offsetWidth = popup.offsetWidth;
+      popup.classList.add("modal-error");
+    } else {
+      nameField.classList.remove("field-error");
+      emailField.classList.remove("field-error");
+      contentField.classList.remove("field-error");
+      if (isStorageSupport) {
+        localStorage.setItem("name", nameField.value);
+        localStorage.setItem("email", emailField.value);
+      }
+    }
+  });
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (popup.classList.contains("modal-visible")) {
+        popup.classList.remove("modal-visible");
+        popup.classList.remove("modal-error");
+      }
+    }
+  });
+</script>
 </body>
 </html>
