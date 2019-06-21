@@ -18,7 +18,7 @@ body {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  color: #283136;
+  color: #000000;
 }
 
 a {
@@ -81,12 +81,18 @@ a {
   text-transform: uppercase;
 }
 
-/*Секция с услугами*/
 .services-link {
+  display: block;
+  width: 160px;
+  padding: 16px 0;
   line-height: 18px;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 500;
   text-transform: uppercase;
   text-decoration: none;
-  color: #ffffff;
+  border-radius: 3px;
+  border: none;
 }
 
 .services-link--red {
@@ -160,11 +166,16 @@ a {
 }
 
 .filter-button {
-  font-size: 16px;
-  line-height: 22px;
+  display: block;
+  width: 260px;
+  padding: 16px 0;
+  line-height: 18px;
   text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
   font-weight: 500;
   background-color: #eeeeee;
+  border-radius: 3px;
   border: none;
 }
 
@@ -186,30 +197,74 @@ a {
   text-decoration: none;
 }
 
+/* Всплывающее окно с ценой*/
 .catalog-item-info {
-  display: none;
-  background-color: #eee;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 360px;
+  padding-bottom: 40px;
+  line-height: 18px;
+  background-color: #eeeeee;
+  color: #ffffff;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .catalog-item-title {
+  margin: 0 0 30px;
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
+  font-weight: 700;
 }
+/*Три положения заголовка*/
+.catalog-item-title:hover {
+  color:#fb565a;
+}
+
+.catalog-item-title:active {
+  color:#cacaca;
+}
+
 
 .catalog-item-subtitle {
+  display: block;
+  margin-bottom: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 0 0 10px;
   line-height: 18px;
   color: #666666;
+  text-transform: none;
+}
+/*3 положения кнопки во всплывающем окне*/
+.catalog-button {
+  display: block;
+  width: 235px;
+  padding: 16px 0;
+  margin: 0 auto;
+  line-height: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #fb565a;
+  border-radius: 3px;
+  border: none;
 }
 
-.catalog-button {
-  line-height: 30px;
-  text-transform: uppercase;
-  color: #ffffff;
+.catalog-button:hover {
   background-color: #fb565a;
 }
 
-/*Карта ,заданная фоном- задала другую ширину, но не могу сдвинуть влево на 280пикс*/
+.catalog-button:active {
+  background-color: #d7373b;
+}
+
+
+/*Карта ,заданная фоном-*/
 .contacts-wrapper {
   margin-top: 80px;
   padding: 55px 0;
@@ -219,13 +274,12 @@ a {
   -webkit-background-size: cover;
   background-size: cover;
 }
-
 /*Белый квадрат с адресом*/
 .contacts {
   width: 320px;
   height: 310px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 49px;
+  padding-bottom: 49px;
   background-color: #ffffff;
   text-align: center;
   -webkit-box-sizing: border-box;
@@ -242,20 +296,19 @@ a {
 }
 
 .contacts-details {
-    line-height: 18px;
-    font-style: normal;
+  line-height: 18px;
+  font-style: normal;
 }
 
 .contacts-details span {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 }
-
 
 .contacts-button {
   display: block;
   width: 220px;
-  margin: 35px auto 0px;
+  margin: 28px auto 0px;
   padding: 19px 0;
   line-height: 18px;
   font-weight: 500;
@@ -306,9 +359,12 @@ a {
   margin: 0 130px 0 0;
 }
 
-/*Замечание 1. заменяем лишку на ссылку*/
 .footer-list li {
   list-style: none;
+}
+
+.footer-slogan {
+  width: 545px;
 }
 
 .footer-item a {
@@ -321,6 +377,19 @@ a {
   margin-right: 10px;
   background-color: #e1e1e1;
   line-height: 80px;
+}
+
+.footer-item a:hover {
+  background-color: #e74246;
+}
+
+.footer-item a:active {
+  background-color: #d7363b;
+  color: #e26f74;
+}
+
+.footer-item a:active svg {
+  opacity: 0.3;
 }
 
 .footer-slogan-heading {
@@ -782,8 +851,7 @@ input[type="radio"]:checked + label::before {
 .button {
   display: block;
   width: 240px;
-  padding: 13px 0;
-  font-size: 16px;
+  padding: 16px 0;
   line-height: 18px;
   color: #ffffff;
   text-transform: uppercase;
@@ -821,12 +889,11 @@ input[type="radio"]:checked + label::before {
   display: block;
   padding: 10px 19px;
   text-decoration: none;
-  color: #010101;
   background-color: #eeeeee;
   border-radius: 3px;
 }
 
-/*Наведение -dfdfdf ,нажатие и активный пункт-d5d5d5*/
+
 .pagination-item a:hover {
   background-color: #dfdfdf;
 }
@@ -851,6 +918,10 @@ input[type="radio"]:checked + label::before {
 }
 
 /*Секция с логотипом клиентов*/
+.our-clients {
+  margin-top: 40px;
+}
+
 .our-clients-list {
   list-style: none;
   display: flex;
@@ -859,16 +930,45 @@ input[type="radio"]:checked + label::before {
   padding-left: 0px;
   justify-content: space-between;
   border-top: 1px solid #bfbfbf;
-  padding-top: 44px;
   border-bottom: 1px solid #bfbfbf;
-  padding-bottom: 50px;
+  padding-top: 45px;
+  padding-bottom: 37px;
 }
 
 .our-clients-list li {
+  position: relative;
   text-align: center;
-  height: 55px;
   width: 25%;
-  border-right: 1px solid #bfbfbf;
+}
+
+.our-clients-list li img {
+  opacity: 0.2;
+}
+
+.our-clients-list li:after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 50px;
+  right: 0;
+  display: block;
+  background-color: #eeeeee;
+  top: 50%;
+  margin-top: -25px;
+}
+
+.our-clients-list li:last-child:after {
+  display: none;
+}
+
+/*Наведение*/
+.our-clients-list li:hover img {
+  opacity: 1;
+}
+
+/*Активное состояние */
+.our-clients-list li:active img {
+  opacity: 0.1;
 }
 
 .our-clients-list li:last-child {
