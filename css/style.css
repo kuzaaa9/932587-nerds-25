@@ -591,6 +591,7 @@ a {
 
 .footer-slogan-text {
   line-height: 22px;
+  color:  #444444;
 }
 
 /*секция Услуги*/
@@ -642,7 +643,7 @@ a {
 }
 
 .about-us-subheading {
-  font-weight: 500;
+  font-weight: 700;
   text-transform: uppercase;
   margin-top: 45px;
 }
@@ -668,6 +669,7 @@ a {
 }
 
 .about-us-table {
+  line-height: 18px;
   border-spacing: 0;
 }
 
@@ -750,6 +752,10 @@ a.cart-navigation {
   margin: 0;
   padding: 0;
   border: none;
+}
+
+.filter-item legend {
+  line-height: 30px;
 }
 
 .range-filter {
@@ -1043,6 +1049,7 @@ input[type="radio"]:checked + label::before {
   width: 240px;
   padding: 16px 0;
   line-height: 18px;
+  font-weight: 500;
   color: #ffffff;
   text-transform: uppercase;
   text-align: center;
