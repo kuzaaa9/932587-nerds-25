@@ -139,7 +139,8 @@
       </section>
     </div>
     <section class="contacts-wrapper">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1188.3823920152272!2d30.32231397986258!3d59.938563839959684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sfr!4v1561130949001!5m2!1sru!2sfr" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <img class="map-placeholder"src="img/map.jpg" width="1440" height="415" alt="Карта, показывающая месторасположение оффиса компании">
+      <div class="map"></div>
       <div class="container">
              <!-- Белый квадрат на фоне карты -->
      <div class="contacts">
@@ -211,6 +212,19 @@
   <button class="modal-close" type="button write-us-button"></button>
 </section>
 <script>
+  //  карта
+  function initMap() {
+    var position = {lat: 59.938717, lng: 30.323047};
+    var map = new google.maps.Map(document.querySelector('.map'), {zoom: 17, center: position});
+    var icon = 'img/map-marker.png';
+    var marker = new google.maps.Marker({
+      position: {lat: 59.938717, lng: 30.3238},
+      map: map,
+      icon: icon
+    });
+  }
+
+  // форма
   var contactForm = document.querySelector('.write-us');
   var popupButtonOpen = document.querySelector('.contacts-button');
   var popup = document.querySelector('.modal');
@@ -282,5 +296,6 @@
     }
   });
 </script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcyb6rCDQ6vRyanuz0zAvRumn1YRb3F7E&callback=initMap"></script>
 </body>
 </html>
