@@ -18,7 +18,7 @@
       <ul class="site-navigation">
         <li><a href="index.html">Студия</a></li>
         <li><a href="client.html">Клиенты</a></li>
-        <li class="site-navigation-active-link"><a>Магазин</a></li>
+        <li><a class="site-navigation-active-link">Магазин</a></li>
         <li><a href="contacts.html">Контакты</a></li>
       </ul>
       <a class="cart-navigation" href="cart.html">Корзина</a>
@@ -34,7 +34,7 @@
       <h2 class="visually-hidden">Фильтр товаров</h2>
       <form action="https://echo.htmlacademy.ru" method="get">
         <!-- Стоимость -->
-        <fieldset class="filter-item">
+        <fieldset class="filter-item filter-cost">
           <legend>Стоимость:</legend>
           <div class="range-filter">
             <div class="range-controls">
@@ -51,7 +51,7 @@
           </div>
         </fieldset>
         <!-- Сетка -->
-        <fieldset class="filter-item">
+        <fieldset class="filter-item filter-grid">
           <legend>Сетка</legend>
           <ul class="filter-list">
             <li>
@@ -69,7 +69,7 @@
           </ul>
         </fieldset>
         <!-- Особенности -->
-        <fieldset class="filter-item">
+        <fieldset class="filter-item filter-features">
           <legend>Особенности: </legend>
           <ul class="filter-list">
             <li>
@@ -91,12 +91,23 @@
           </ul>
         </fieldset>
         <!-- Кнопка -->
-        <button class="filter-button" type="submit"> Показать
-        </button>
+        <button class="filter-button" type="submit"> Показать</button>
         </form>
     </section>
     <!-- Каталог карточек товаров в виде готовых сайтов-->
     <section class="catalog">
+        <div class="sorting">
+          <h1 class="sorting-heading">Сортировать:</h1>
+          <ul class="sorting-list">
+            <li class="sorting-list-item sorting-list-current"><a href="#">По цене</a></li>
+            <li class="sorting-list-item"><a href="#">По типу</a></li>
+            <li class="sorting-list-item"><a href="#">По названию</a></li>
+          </ul>
+          <div class="catalog-buttons">
+            <button class="catalog-arrow catalog-arrow-active catalog-arrow-down" type="button" aria-label="От большего к меньшему"></button>
+            <button class="catalog-arrow catalog-arrow-up" type="button" aria-label="От меньшего к большему"></button>
+          </div>
+        </div>
       <h2 class="visually-hidden">Каталог сайтов</h2>
       <ul class="catalog-list">
         <li class="catalog-item">
@@ -150,7 +161,6 @@
           </div>
        </li>
       </ul>
-
       <!-- Пагинация  -->
       <ul class="pagination-list">
         <li class="pagination-item pagination-item-current"><a href="#">1</a>

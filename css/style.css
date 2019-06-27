@@ -154,7 +154,8 @@ a {
 /*Фильтры*/
 .filter-list {
   list-style-type: none;
-  padding-left: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .filter-type legend {
@@ -195,7 +196,22 @@ a {
 /* Единица каталога */
 .catalog-item {
   list-style: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  box-sizing: border-box;
 }
+
+.catalog-item img {
+  box-sizing: border-box;
+  vertical-align: top;
+  max-width: 100%;
+  border-top: none;
+}
+
+.catalog-item:hover {
+  box-shadow: 6px 0px 15px 0px rgba(0,0,0,0.25);
+}
+
 
 .catalog-item  a {
   text-decoration: none;
@@ -203,7 +219,8 @@ a {
 
 /* Всплывающее окно с ценой*/
 .catalog-item-info {
-  display: block;
+  opacity: 0;
+  visibility: hidden;
   position: absolute;
   left: 0;
   right: 0;
@@ -218,6 +235,13 @@ a {
   color: #ffffff;
   text-align: center;
   box-sizing: border-box;
+  transition: 0.2s opacity;
+
+}
+
+.catalog-item:hover .catalog-item-info {
+  opacity: 1;
+  visibility: visible;
 }
 
 .catalog-item-title {
@@ -248,7 +272,6 @@ a {
   margin: 0px auto;
 }
 
-/*3 положения кнопки во всплывающем окне*/
 .catalog-button {
   display: block;
   width: 200px;
@@ -263,9 +286,8 @@ a {
   border: none;
 }
 
-/*цвет тот же самый, что и в состоянии покоя*/
 .catalog-button:hover {
-  background-color: #fb565a;
+  background-color: #e74246;
 }
 
 .catalog-button:active {
@@ -273,7 +295,8 @@ a {
   box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
 }
 
-/*Карта ,заданная фоном-*/
+/*Секция с картой и адресом*/
+
 .contacts-wrapper {
   position: relative;
   margin-top: 80px;
@@ -549,6 +572,14 @@ a {
   padding: 0 24px;
 }
 
+.site-navigation a {
+  padding-bottom: 10px;
+}
+
+.site-navigation-active-link {
+  border-bottom: 2px solid #fb565a;
+}
+
 /*Флекс контейнер для футера */
 .footer-container {
   display: flex;
@@ -687,6 +718,7 @@ a {
 }
 
 .about-us-table {
+  margin-top: 33px;
   line-height: 18px;
   border-spacing: 0;
 }
@@ -765,6 +797,115 @@ a.cart-navigation {
   opacity: 1;
 }
 
+/*Сортировка результатов*/
+
+.sorting {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.sorting-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  text-transform: uppercase;
+  align-items: center;
+}
+
+.sorting-heading {
+  width: 50%;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0;
+}
+
+.sorting-list-item {
+  font-weight: 500;
+  padding-right: 25px;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.sorting-list-item a {
+  text-decoration: none;
+  opacity: 0.3;
+}
+
+
+.sorting-list-item a:hover,
+.sorting-list-item a:focus {
+  opacity: 0.6;
+}
+
+.sorting-list-current a,
+.sorting-list-item a:active {
+  opacity: 1;
+}
+
+.catalog-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.catalog-arrow {
+  width: 0;
+  height: 0;
+  padding: 0;
+  border-style: solid;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.catalog-arrow-down {
+  margin-right: 16px;
+  border-width: 10px 5.5px 0;
+  border-color:  #a6a6a6 transparent transparent;
+  opacity: 0.2;
+}
+
+.catalog-arrow-down:hover {
+  border-color:  #a6a6a6 transparent transparent;
+  opacity: 1;
+}
+
+.catalog-arrow-down:active,
+.catalog-arrow-down:focus {
+  border-color:  #000000 transparent transparent;
+  opacity: 1;
+}
+
+.catalog-arrow-up {
+  margin: 0;
+  border-width: 0 5.5px 10px;
+  border-color: transparent transparent #a6a6a6;
+  opacity: 0.2;
+}
+
+.catalog-arrow-up:hover {
+  border-color: transparent transparent #a6a6a6;
+  opacity: 1;
+}
+
+.catalog-arrow-up:active,
+.catalog-arrow-up:focus {
+  border-color: transparent transparent #000000;
+  opacity: 1;
+}
+
+.catalog-arrow-active.catalog-arrow-down {
+  border-color:  #000000 transparent transparent;
+  opacity: 1;
+}
+
+.catalog-arrow-active.catalog-arrow-up {
+  border-color: transparent transparent #000000;
+  opacity: 1;
+}
+
 /*Особенности Разметка сложного фильтра*/
 .filter-item {
   margin: 0;
@@ -772,22 +913,35 @@ a.cart-navigation {
   border: none;
 }
 
+.filter-cost {
+  margin-bottom: 55px;
+}
+
+.filter-grid {
+  margin-bottom: 40px;
+}
+
+.filter-features {
+  margin-bottom: 30px;
+}
+
 .range-filter {
   width: 260px;
-  margin-top: 49px;
+  margin-top: 60px;
 }
 
 .filter-item legend {
   font-size: 18px;
-  line-height: 30px;
+  line-height: 24px;
   text-transform: uppercase;
   font-weight: 700;
+  margin-bottom: 15px;
 }
 
 .range-controls {
   position: relative;
   height: 41px;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   padding-top: 39px;
   padding-right: 20px;
   padding-left: 20px;
@@ -902,7 +1056,7 @@ input[type="radio"] {
 input[type="checkbox"] + label,
 input[type="radio"] + label {
   position: relative;
-  padding-left: 30px;
+  padding-left: 35px;
 }
 
 /*Стилизуем чекбоксы*/
@@ -916,6 +1070,7 @@ input[type="checkbox"] + label::before {
   margin-top: -11.5px;
   background-image: url("../img/checkbox-off.svg");
   opacity: 0.4;
+  transition: 0.2s opacity;
 }
 
 input[type="checkbox"]:checked + label::before {
@@ -937,11 +1092,27 @@ input[type="radio"] + label::before {
   margin-top: -12.5px;
   background-image: url("../img/radio-off.svg");
   opacity: 0.4;
+  transition: 0.2s opacity;
 }
 
 input[type="radio"]:checked + label::before {
   background-image: url("../img/radio-on.svg");
   opacity: 0.4;
+}
+
+input[type="checkbox"] + label:hover::before,
+input[type="radio"] + label:hover::before {
+  opacity: 1;
+}
+
+input[type="checkbox"]:disabled + label::before,
+input[type="radio"]:disabled + label::before {
+  opacity: 0.1;
+}
+
+input[type="checkbox"]:disabled + label,
+input[type="radio"]:disabled + label {
+  color: rgba(40, 49, 54, 0.3);
 }
 
 .filter-list li {
@@ -1119,6 +1290,8 @@ input[type="radio"]:checked + label::before {
 .pagination-item a:focus,
 .pagination-item a:active {
   background-color: #d5d5d5;
+  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .pagination-item-current a {
