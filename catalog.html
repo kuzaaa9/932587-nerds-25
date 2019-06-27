@@ -8,13 +8,13 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Шапка проекта Нердс -->
+  <!-- Шапка-->
   <header class="main-header">
     <nav class="main-navigation container">
       <a class="main-header-logo" href="index.html">
         <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип студии «Нердс»">
       </a>
-      <!-- Основная навигация для шапки сайта  -->
+      <!-- Основная навигация  -->
       <ul class="site-navigation">
         <li><a href="index.html">Студия</a></li>
         <li><a href="client.html">Клиенты</a></li>
@@ -29,7 +29,7 @@
         <h1 class="heading-text container">Магазин готовых шаблонов</h1>
     </div>
     <div class="catalog-columns container">
-          <!-- Секция фильтров -->
+    <!-- Секция фильтров -->
     <section class="filters">
       <h2 class="visually-hidden">Фильтр товаров</h2>
       <form action="https://echo.htmlacademy.ru" method="get">
@@ -55,15 +55,15 @@
           <legend>Сетка</legend>
           <ul class="filter-list">
             <li>
-              <input type="radio" id="adaptive" name="grid" value="adaptive" checked>
+              <input type="radio" id="adaptive" class="radio-button" name="grid" value="adaptive" checked>
               <label for="adaptive">Адаптивная</label>
             </li>
             <li>
-              <input id="fixed" type="radio" name="grid" value="fixed">
+              <input id="fixed" type="radio" class="radio-button" name="grid" value="fixed">
               <label for="fixed">Фиксированная</label>
             </li>
             <li>
-              <input id="flexible" type="radio" name="grid" value="flexible">
+              <input id="flexible" type="radio" class="radio-button" name="grid" value="flexible">
               <label for="flexible">Резиновая</label>
             </li>
           </ul>
@@ -73,31 +73,30 @@
           <legend>Особенности: </legend>
           <ul class="filter-list">
             <li>
-              <input id="slider" type="checkbox" name="property1" value="slider">
+              <input id="slider" type="checkbox" class="checkbox-field"  name="property1" value="slider">
               <label for="slider" >Слайдер</label>
             </li>
             <li>
-              <input id="benefits" type="checkbox" name="property2" value="benefits">
+              <input id="benefits" type="checkbox" class="checkbox-field" name="property2" value="benefits">
               <label for="benefits">Блок преимуществ</label>
             </li>
             <li>
-              <input id="news" type="checkbox" name="property3" value="news">
+              <input id="news" type="checkbox" class="checkbox-field" name="property3" value="news">
               <label for="news">Новости</label>
             </li>
             <li>
-              <input id="gallery" type="checkbox" name="property4" value="gallery">
+              <input id="gallery" type="checkbox" class="checkbox-field" name="property4" value="gallery">
               <label for="gallery">Галерея</label>
             </li>
           </ul>
         </fieldset>
-        <!-- Кнопка -->
         <button class="filter-button" type="submit"> Показать</button>
         </form>
     </section>
-    <!-- Каталог карточек товаров в виде готовых сайтов-->
+    <!-- Каталог сайтов-->
     <section class="catalog">
         <div class="sorting">
-          <h1 class="sorting-heading">Сортировать:</h1>
+          <p class="sorting-heading">Сортировать:</p>
           <ul class="sorting-list">
             <li class="sorting-list-item sorting-list-current"><a href="#">По цене</a></li>
             <li class="sorting-list-item"><a href="#">По типу</a></li>
@@ -173,6 +172,7 @@
         </li>
      </ul>
     </section>
+    </div>
   </main>
   <footer class="main-footer">
     <div class="footer-container container">

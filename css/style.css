@@ -329,14 +329,12 @@ a {
   height: 310px;
   padding: 50px;
   background-color: #ffffff;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   position: relative;
   z-index: 999;
 }
 
-.contacts h1 {
+.contacts-heading {
   margin: 0 0 30px;
   font-size: 18px;
   line-height: 30px;
@@ -691,9 +689,6 @@ a {
   margin-bottom: 30px;
   margin-top: 35px;
 }
-.about-us-subheading-uno{
-  width: 625px;
-}
 
 .about-us-subheading {
   font-weight: 700;
@@ -718,7 +713,7 @@ a {
   text-transform: uppercase;
   font-weight: 700;
   margin: 0;
-  padding-bottom: 50px;
+  padding-bottom: 65px;
 }
 
 .about-us-table {
@@ -731,8 +726,13 @@ a {
   font-size: 45px;
   line-height: 11px;
   font-weight: 500;
-  padding-bottom: 25px;
-  width: 33,3333333%;
+  padding-bottom: 31px;
+  width: 33.3333333%;
+  text-align: left;
+}
+
+.about-us-table td {
+  color: #283136;
 }
 
 /*-- Блок маркетинга -флексы --*/
@@ -1047,8 +1047,8 @@ a.cart-navigation {
 }
 
 /*Стилизация радиокнопок в виде псевдоэлементов- особенности*/
-input[type="checkbox"],
-input[type="radio"] {
+.radio-button,
+.checkbox-field {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -1059,14 +1059,13 @@ input[type="radio"] {
   overflow: hidden;
 }
 
-input[type="checkbox"] + label,
-input[type="radio"] + label {
+.radio-button + label,
+.checkbox-field + label {
   position: relative;
   padding-left: 35px;
 }
 
-/*Стилизуем чекбоксы*/
-input[type="checkbox"] + label::before {
+.checkbox-field + label::before {
   content: "";
   position: absolute;
   width: 23px;
@@ -1079,16 +1078,13 @@ input[type="checkbox"] + label::before {
   transition: 0.2s opacity;
 }
 
-input[type="checkbox"]:checked + label::before {
+.checkbox-field:checked + label::before {
   width: 27px;
   background-image: url("../img/checkbox-on.svg");
   opacity: 0.4;
 }
 
-/*Стилизуем радиобаттоны*/
-
-/*Первое состояние- выключено*/
-input[type="radio"] + label::before {
+.radio-button + label::before {
   content: "";
   position: absolute;
   width: 25px;
@@ -1101,23 +1097,23 @@ input[type="radio"] + label::before {
   transition: 0.2s opacity;
 }
 
-input[type="radio"]:checked + label::before {
+.radio-button:checked + label::before {
   background-image: url("../img/radio-on.svg");
   opacity: 0.4;
 }
 
-input[type="checkbox"] + label:hover::before,
-input[type="radio"] + label:hover::before {
+.radio-button + label:hover::before,
+.checkbox-field + label:hover::before {
   opacity: 1;
 }
 
-input[type="checkbox"]:disabled + label::before,
-input[type="radio"]:disabled + label::before {
+.checkbox-field:disabled + label::before,
+.radio-button:disabled + label::before {
   opacity: 0.1;
 }
 
-input[type="checkbox"]:disabled + label,
-input[type="radio"]:disabled + label {
+.radio-button:disabled + label,
+.checkbox-field:disabled + label {
   color: rgba(40, 49, 54, 0.3);
 }
 
