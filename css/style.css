@@ -985,10 +985,11 @@ a.cart-navigation {
   bottom: 0;
   box-sizing: border-box;
   color: #ffffff;
-  height: 230px;
+  min-height: 230px;
   left: 0;
   line-height: 18px;
   opacity: 0;
+  padding-bottom: 40px;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 5px;
@@ -1028,8 +1029,11 @@ a.cart-navigation {
   display: block;
   line-height: 18px;
   margin: 0px auto;
+  max-height: 390px;
   padding-bottom: 30px;
+  overflow-y: auto;
   width: 185px;
+  word-break: break-all;
 }
 
 .catalog-button {
